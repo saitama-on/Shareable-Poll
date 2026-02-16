@@ -43,5 +43,17 @@ Tech Stack:
 
 
 
-
+Steps to run Locally:
+1. git clone <url-of-this-repository>
+2. cd Shareable-Poll
+        #Backend
+           -cd poll -> npm install
+           -create a .env file with credentials (refer demo .env)
+           -node src/app.js
+       #frontend
+           -cd pollFrontEnd -> npm install
+           -change the API_URL to http://localhost:3000
+           -change shareLink url to frontend's url
+           -npm run dev
+   
 
