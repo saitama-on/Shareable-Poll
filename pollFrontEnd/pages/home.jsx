@@ -13,7 +13,7 @@ export default function Home() {
         hostUsername:localStorage.getItem("username"),
         questionText:"",
         no_of_options:2,
-        options:["","","",""],
+        options:["","","","",""],
         correctOption:1
       })
       const [joinData , setJoinData] = useState({
@@ -54,7 +54,7 @@ export default function Home() {
     const value = e.target.value ;
     setPollData((prev)=>{
       const newOptions = [...prev.options];
-      newOptions[index-1] = value;
+      newOptions[index] = value;
       return {
         ...prev,
         options:newOptions
@@ -126,7 +126,7 @@ export default function Home() {
                     <input type="number" min={2} max={4} placeholder="Enter number of options" name="no_of_options" value={pollData.no_of_options} onChange={(e)=>handleChangeData(e)}/>
                     <label>Enter options</label>
                         {Array.from({length:pollData.no_of_options}, (_,i)=>(
-                        <input key={i} type='text' placeholder={`Option ${i+1}`} name={i} onChange={(e)=>handleChangeOptions(e)}/>
+                        <input key={i} type='text' placeholder={`Option ${i+1}`} name={i+1} onChange={(e)=>handleChangeOptions(e)}/>
                         ))}
                     <label>Enter correct option number</label>
                     <input type="number"min={1} max={pollData.no_of_options} placeholder="Enter correct option" name="correctOption" value={pollData.correctOption} onChange={(e)=>handleChangeData(e)}/>
