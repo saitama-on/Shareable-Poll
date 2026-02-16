@@ -18,7 +18,7 @@ Two anti-abuse mechanisms used:
     Implemented by storing the username in browser's localStorage and checking on submission whether there is already a submisson for this username or not for a particular poll.  
     ->Limitation : Same person can create multiple accounts using differnt browsers or can clear username in localStorage and add new one .  
 
-#2 . Limit for poll creation: One user can only create 5 ( can be any number) per hour. This limits users from spamming servers with many polls.  
+#2 . Rate Limiting for poll creation: One user can only create 5 ( can be any number) per hour. This limits users from spamming servers with many polls.  
     ->Limitation : Same user can user different username by clearing localStorage and create more than 5 polls.  
 
 Some Edge Cases Handled:    
