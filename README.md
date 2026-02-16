@@ -11,7 +11,8 @@ Key features:
 #1. Username based poll creation (username has to be unique) , no authentication required.  
 #2. Get instant link for poll that can be shared and multiple users can join.  
 #3. Real-time result updation .  
-#4. Polls can be used later also , link doesn't expire.  
+#4. Polls can be used later also , link doesn't expire.
+#5. Persistance is ensured . Data stays even on refresh as it is fetched from the backend.
 
 
 Two anti-abuse mechanisms used:  
