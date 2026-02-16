@@ -110,6 +110,10 @@ export default function Home() {
           }
         })
     }
+    else{
+      alert(data.message);
+      return;
+    }
 }
 
     return (

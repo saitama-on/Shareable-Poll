@@ -11,6 +11,28 @@ const createNewPoll = asyncHandler(async (req,res)=>{
     const {hostUsername , questionText , options , correctOption} = req.body
 
     //recieve validated data from frontend
+
+
+    //check if this username has created more than 10 polls in last 1hour
+
+
+    const allPollsByUser = await Poll.find({createdBy:hostUsername});
+    let lasthourPolls = 0;
+
+    for(let poll of allPollsByUser){
+        const pollCreationTime = new Date(poll.createdAt).getTime();
+        const currentTime = new Date().getTime();
+
+        if(currentTime - pollCreationTime < 60*60*1000){
+            lasthourPolls++;
+        }
+    }
+    if(lasthourPolls > 5){
+        return res.status(400).json({
+            success:false,
+            message:"Limit Exceeded : You have created more than 5 polls in the last hour"
+        })
+    }                                                       
     //upload to db
 
     //creare options in db

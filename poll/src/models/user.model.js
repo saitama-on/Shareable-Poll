@@ -17,6 +17,11 @@ const UserSchema = new Schema(
         ipAddress:{
             type:String,
             required:true
+        },
+
+        pollsCreated:{
+            type:Number,
+            default:0
         }
 
 
