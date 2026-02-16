@@ -98,7 +98,7 @@ export default function Home() {
 
     const data = await response.json();
     if(data.success){
-        let pollLink = `http://localhost:5173/polls/${data.pollID}`;
+        let pollLink = `https://shareable-poll-frontend.onrender.com/polls/${data.pollID}`;
         setPollLink(pollLink);
         setJoinData((prev)=>{
           return {
