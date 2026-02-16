@@ -1,0 +1,36 @@
+/* Username Page Styles */
+.username-container {
+  min-height: 100vh;
+  padding: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.username-container h1 {
+  margin-bottom: var(--spacing-3xl);
+  text-align: center;
+}
+
+.username-container input {
+  width: 100%;
+  max-width: var(--input-max-width);
+  margin-bottom: var(--spacing-lg);
+}
+
+.username-container button {
+  width: 100%;
+  max-width: var(--input-max-width);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .username-container {
+    padding: var(--spacing-lg);
+  }
+
+  .username-container h1 {
+    font-size: var(--font-size-xl);
+  }
+}
