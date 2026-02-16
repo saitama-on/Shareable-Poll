@@ -64,6 +64,7 @@ export default function PollPage(){
     const handlePollSubmit = async()=>{
 
         const username = localStorage.getItem("username");
+        await updateVotes();
 
         const votes = pollData.votes;
         for(let vote of votes){
