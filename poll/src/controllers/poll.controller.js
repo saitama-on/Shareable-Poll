@@ -29,7 +29,7 @@ const createNewPoll = asyncHandler(async (req,res)=>{
     const poll = await Poll.create({
         questionText,
         options:optionIds,
-        correctOption:optionIds[correctOption],
+        correctOption:optionIds[correctOption-1],
         createdBy:hostUsername,
         votes:[]
     })
