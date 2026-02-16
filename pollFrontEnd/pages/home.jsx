@@ -54,7 +54,7 @@ export default function Home() {
     const value = e.target.value ;
     setPollData((prev)=>{
       const newOptions = [...prev.options];
-      newOptions[index] = value;
+      newOptions[index-1] = value;
       return {
         ...prev,
         options:newOptions
