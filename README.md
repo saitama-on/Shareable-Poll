@@ -2,7 +2,8 @@ Title : Shareable Poll application
 
 Purpose : Create Polls and share link among peers , get realtime results of the poll.  
 
-Demo Video :   
+Demo Video : https://drive.google.com/file/d/1YvpAlSs3yecAred7E-UqUBLoltRv07Rj/view?usp=sharing
+(any delay in live results would be due to backend server delays of render)
 Demo Link : https://shareable-poll-frontend.onrender.com/  
 (Backend might take 30-50 seconds to spin up as I am on free tier account)  
 
