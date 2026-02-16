@@ -99,7 +99,7 @@ export default function PollPage(){
 
     return (
 
-        <div>
+        <div className="poll-page-container">
             <div>
                 <p>Poll created by : {pollData.createdBy}</p>
                 <a href="/">Back to Home</a>

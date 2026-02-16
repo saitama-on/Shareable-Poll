@@ -8,6 +8,7 @@ import {API_URL} from '../constants.js'
 export default function UsernamePage(){
 
     const [username , setUsername] = useState("");
+    const [loading , setLoading] = useState(false);
     // const [validUsername , setValidUsername] = useState(false);
     const navigate = useNavigate();
 
@@ -16,6 +17,8 @@ export default function UsernamePage(){
             alert("Username cannot be empty");
             return;
         }
+
+        setLoading(true);
 
         //check if username is already taken in db
 
@@ -57,12 +60,20 @@ export default function UsernamePage(){
             alert("Username is already taken");
             setUsername("");
         }
+        setLoading(false);
     }
     return (
         <div className="username-container">
-            <h1>Choose a username</h1>
-            <input type="text" placeholder="Enter username" value={username} onChange={(e)=>{setUsername(e.target.value)}}/>
-            <button onClick={handleContinue}>Continue</button>
+            <div>
+                <h1>Choose a username</h1>
+                <input type="text" placeholder="Enter username" value={username} onChange={(e)=>{setUsername(e.target.value)}}/>
+                <button onClick={handleContinue}>{loading ? "Loading..." : "Continue"}</button>
+            </div>
+
+            <div className="note-container">
+                <p>Note: Backend might take 40-50 seconds to spin up as I am on free tier.</p>
+            </div>
+
         </div>
     )
 }
