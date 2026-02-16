@@ -72,10 +72,13 @@ export default function Home() {
 
     let cnt=0;
     for(let option of options){
-      if(!option && cnt < data.no_of_options){
-        return false;
+      if(!option){
+        cnt++;
       }
-      cnt++;
+    }
+
+    if(cnt > 5 - no_of_options){
+      return false;
     }
     return true;
   }
